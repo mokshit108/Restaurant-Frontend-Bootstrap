@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Ristorante Con Fusion</title>
-  <!-- All Bootstrap CSS Files-->
+
+  <!-- All Bootstrap CSS -->
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+  <title>Moksh Restaurant</title>
 </head>
+
 <body>
+
   <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
     <div class="container">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" width="41" alt="Ristorante Con Fusion"></a>
+      <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="45" width="81" alt="Moksh Restaurant"></a>
       <div class="collapse navbar-collapse" id="Navbar">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
           <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
           <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
         </ul>
         <span class="navbar-text">
-          <a data-toggle="modal" data-target="#loginModal"><span class="fa fa-sign-in"></span> Login</a>
+          <a id="loginButton"><span class="fa fa-sign-in"></span> Login</a>
         </span>
       </div>
     </div>
   </nav>
+
   <div id="loginModal" class="modal fade" role="dialog">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header navbar-dark" style="color:white;">
           <h4 class="modal-title">Login </h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" style="background-color:#7ec5ff;">
           <form>
             <div class="form-row">
               <div class="form-group col-sm-4">
@@ -67,14 +70,15 @@
       </div>
     </div>
   </div>
+
   <div id="reservationModal" class="modal fade" role="dialog">
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header navbar-dark" style="color:white;">
           <h5 class="modal-title">Reserve a Table</h5>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" style="background-color:#7ec5ff;">
           <form>
             <div class="form-group row">
               <label class="col-12 col-sm-2">Number of Guests</label>
@@ -106,10 +110,10 @@
               <div class="col-12 col-sm-4">
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                   <label class="btn btn-success active">
-                    <input type="radio" name="section" value="non_smoking" id="non_smoking" autocomplete="off" checked>Non-Smoking
+                    <input type="radio" name="section" value="non_smoking" id="non_smoking" checked>Non-Smoking
                   </label>
                   <label class="btn btn-danger">
-                    <input type="radio" name="section" value="smoking" id="smoking" autocomplete="off">Smoking
+                    <input type="radio" name="section" value="smoking" id="smoking">Smoking
                   </label>
                 </div>
               </div>
@@ -134,49 +138,49 @@
       </div>
     </div>
   </div>
+
   <header class="jumbotron">
     <div class="container">
       <div class="row row-header">
         <div class="col-12 col-sm-6">
-          <h1>Ristorante con Fusion</h1>
-          <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+          <h1>Moksh Restaurant</h1>
+          <p>We take inspiration from the World's best Food Dishes, and create a unique fusion experience. Our creations will tickle your culinary senses!</p>
         </div>
         <div class="col-12 col-sm-3 text-center align-self-center">
-          <img src="img/logo.png" class="img-fluid" alt="Ristorante con Fusion">
+          <img src="img/logo.png" class="img-fluid" alt="Moksh Restaurant" width="300px">
         </div>
         <div class="col-12 mt-5 mt-sm-0 col-sm-3 text-center align-self-center">
-          <button type="button" class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#reservationModal">Reserve table</button>
+          <button type="button" class="btn btn-block nav-link btn-warning" id="reserveButton">Reserve table</button>
         </div>
       </div>
     </div>
   </header>
+
   <div class="container">
     <div class="row row-content">
       <div class="col">
         <div id="mycarousel" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-              <img class="d-block img-fluid" src="img/uthappizza.png" alt="uthappizza">
-              <div class="carousel-caption d-none d-md-block">
-                <h2>Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-secondary">$4.99</span> </h2>
-                <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+              <img class="d-block img-fluid" src="img/pizza.png" alt="pizza" width="400px">
+              <div class="carousel-caption d-none d-md-block font-weight-bold">
+                <h2>Pizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-secondary">$4.99</span> </h2>
+                <p class="d-none d-sm-block">Pizza, dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives, mozzarella or other cheese, and many other ingredients, baked quickly—usually, in a commercial setting, using a wood-fired oven heated to a very high temperature—and served hot</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img class="d-block img-fluid" src="img/buffet.png" alt="buffet">
-              <div class="carousel-caption d-none d-md-block">
-                <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
-                <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99
-                  per person </p>
+              <img class="d-block img-fluid" src="img/dosa.png" alt="dosa" width="350px">
+              <div class="carousel-caption d-none d-md-block bold font-weight-bold">
+                <h2> South Indian Sepcial Dosa <span class="badge badge-danger">NEW</span></h2>
+                <p class="d-none d-sm-block">A dosa (also dosai or dosha) is a thin pancake or crepe, originating from South India, made from a fermented batter predominantly consisting of lentils and rice. ... Its main ingredients are rice and black gram, ground together in a fine, smooth batter with a dash of salt, then fermented. </p>
               </div>
             </div>
             <div class="carousel-item">
-              <img class="d-block img-fluid" src="img/alberto.png" alt="alberto">
-              <div class="carousel-caption d-none d-md-block">
-                <h2>Alberto Somayya</h2>
-                <h4>Executive Chef</h4>
-                <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion
-                  experiences. </p>
+              <img class="d-block img-fluid" src="img/owner.jpg" alt="Mokshit" width="250px">
+              <div class="carousel-caption d-none d-md-block font-weight-bold">
+                <h2>Mokshit Shah</h2>
+                <h4>Owner</h4>
+                <p class="d-none d-sm-block">Owner Of Moksh Restaurant <br>Always take care of customer health by providing Best Healthy Food.</p>
               </div>
             </div>
           </div>
@@ -191,63 +195,61 @@
           <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
             <span class="carousel-control-next-icon"></span>
           </a>
-
-          
           <button class="btn btn-danger btn-sm" id="carouselButton">
             <span id="carousel-button-icon" class="fa fa-pause"></span>
-        </button>
-           
-
-
+          </button>
         </div>
       </div>
     </div>
+
     <div class="row row-content align-items-center">
       <div class="col-12 col-sm-4 order-sm-last col-md-3">
-        <h3>Our Lipsmacking Culinary Creations</h3>
+        <h3>Monday Special Pizza</h3>
       </div>
       <div class="col col-sm order-sm-first col-md">
         <div class="media">
-          <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/uthappizza.png" alt="uthappizza">
+          <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/pizza.png" alt="pizza" width="300px">
           <div class="media-body">
-            <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-secondary">$4.99</span> </h2>
-            <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+            <h2 class="mt-0">Pizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-secondary">$4.99</span> </h2>
+            <p class="d-none d-sm-block">Pizza, dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives, mozzarella or other cheese, and many other ingredients, baked quickly—usually, in a commercial setting, using a wood-fired oven heated to a very high temperature—and served hot</p>
           </div>
         </div>
       </div>
     </div>
+
     <div class="row row-content align-items-center">
       <div class="col-12 col-sm-4 col-md-3">
-        <h3>This Month's Promotions</h3>
+        <h3>This Month's Special</h3>
       </div>
       <div class="col col-sm col-md">
         <div class="media">
           <div class="media-body">
-            <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
-            <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per
-              person </p>
+            <h2 class="mt-0">South Indian Sepial Dosa <span class="badge badge-danger">NEW</span></h2>
+            <p class="d-none d-sm-block">A dosa (also dosai or dosha) is a thin pancake or crepe, originating from South India, made from a fermented batter predominantly consisting of lentils and rice. ... Its main ingredients are rice and black gram, ground together in a fine, smooth batter with a dash of salt, then fermented. </p>
           </div>
-          <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/buffet.png" alt="buffet">
+          <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/dosa.png" alt="buffet">
         </div>
       </div>
     </div>
+
     <div class="row row-content align-items-center">
       <div class="col-12 col-sm-4 order-sm-last col-md-3">
-        <h3>Meet our Culinary Specialists</h3>
+        <h3>Meet our Owner</h3>
       </div>
       <div class="col col-sm order-sm-first col-md">
         <div class="media">
-          <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/alberto.png" alt="alberto">
+          <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/owner.jpg" alt="Mokshit" width="180px" height="25px">
           <div class="media-body">
-            <h2 class="mt-0">Alberto Somayya</h2>
-            <h4>Executive Chef</h4>
-            <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences.
+            <h2 class="mt-0">Mokshit Shah</h2>
+            <h4>Owner</h4>
+            <p class="d-none d-sm-block">Owner Of Moksh Restaurant <br>Always take care of customer health by providing Best Healthy Food.
             </p>
           </div>
         </div>
       </div>
     </div>
   </div>
+
   <footer class="footer">
     <div class="container">
       <div class="row">
@@ -256,19 +258,17 @@
           <ul class="list-unstyled">
             <li><a href="#">Home</a></li>
             <li><a href="./aboutus.html">About</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="./contactus.html">Contact</a></li>
           </ul>
         </div>
         <div class="col-7 col-sm-5">
           <h5>Our Address</h5>
           <address>
-            121, Clear Water Bay Road<br>
-            Clear Water Bay, Kowloon<br>
-            HONG KONG<br>
+            121, Manohar Building <br>
+            Rampur India<br>
             <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
             <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
-            <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:confusion@food.net">confusion@food.net</a>
+            <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:moksh@food.net">moksh@food.net</a>
           </address>
         </div>
         <div class="col-12 col-sm-4 align-self-center">
@@ -278,34 +278,48 @@
             <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
             <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
             <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
-            <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+            <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o bg-white"></i></a>
           </div>
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-auto">
-          <p>© Copyright 2018 Ristorante Con Fusion</p>
+          <p>© Copyright 2021 Moksh Restaurant</p>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
   <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script>
-    $("#carouselButton").click(function(){
-                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-                    $("#mycarousel").carousel('pause');
-                    $("#carouselButton").children("span").removeClass('fa-pause');
-                    $("#carouselButton").children("span").addClass('fa-play');
-                }
-                else if ($("#carouselButton").children("span").hasClass('fa-play')){
-                    $("#mycarousel").carousel('cycle');
-                    $("#carouselButton").children("span").removeClass('fa-play');
-                    $("#carouselButton").children("span").addClass('fa-pause');                    
-                }
-            });
-   </script>
+    $(document).ready(function() {
+      $("#mycarousel").carousel({
+        interval: 2000
+      });
+      $("#carouselButton").click(function() {
+        if ($("#carouselButton").children('span').hasClass('fa-pause')) {
+          $("#mycarousel").carousel('pause');
+          $("#carouselButton").children('span').removeClass('fa-pause');
+          $("#carouselButton").children('span').addClass('fa-play');
+        } else {
+          $("#mycarousel").carousel('cycle');
+          $("#carouselButton").children('span').removeClass('fa-play');
+          $("#carouselButton").children('span').addClass('fa-pause');
+        }
+      });
+      $('#loginButton').click(function() {
+        $('#loginModal').modal('show');
+      });
+      $('#reserveButton').click(function() {
+        $('#reservationModal').modal('show');
+      });
+
+    });
+  </script>
 
 </body>
+
 </html>
